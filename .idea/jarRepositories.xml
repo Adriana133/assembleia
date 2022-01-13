@@ -3,6 +3,11 @@
   <component name="RemoteRepositoriesConfiguration">
     <remote-repository>
       <option name="id" value="central" />
+      <option name="name" value="Central Repository" />
+      <option name="url" value="http://artifactory.sicredi.net/artifactory/repo" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="central" />
       <option name="name" value="Maven Repository Switchboard" />
       <option name="url" value="http://artifactory.sicredi.net/artifactory/repo" />
     </remote-repository>
