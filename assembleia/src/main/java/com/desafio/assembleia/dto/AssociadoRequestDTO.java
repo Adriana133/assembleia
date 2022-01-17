@@ -11,7 +11,6 @@ import javax.validation.constraints.NotBlank;
 @Builder
 @Getter
 @Setter
-@EqualsAndHashCode
 public class AssociadoRequestDTO {
 
     @JsonProperty(value = "cpf")

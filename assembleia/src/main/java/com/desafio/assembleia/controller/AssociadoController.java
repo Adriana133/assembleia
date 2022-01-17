@@ -46,7 +46,7 @@ public class AssociadoController {
 
     @PutMapping("/{id}")
     public ResponseEntity<AssociadoResponseDTO> atualizar(@RequestBody @Valid AssociadoRequestDTO request,
-                                                           @PathVariable Long id) {
+                                                          @PathVariable Long id) {
         return ResponseEntity
                 .status(HttpStatus.OK)
                 .body(converter.toResponseDto(
