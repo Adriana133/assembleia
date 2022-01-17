@@ -6,9 +6,8 @@ import lombok.*;
 @Builder
 @Getter
 @EqualsAndHashCode
-public class AssociadoResponseDTO {
+public class PautaResponseDTO {
 
     private Long id;
-    private String cpf;
-    private String nome;
+    private String descricao;
 }

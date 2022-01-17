@@ -6,18 +6,16 @@ import javax.persistence.*;
 
 @Entity
 @AllArgsConstructor
-@Builder
 @Getter
 @Setter
+@Builder
 @EqualsAndHashCode
-@Table(name = "associado")
-public class AssociadoEntity {
+@Table(name = "pauta")
+public class PautaEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "ID-SEQUENCE")
-    @SequenceGenerator(name = "ID-SEQUENCE", sequenceName = "ID_ASSOCIADO", allocationSize = 1)
+    @SequenceGenerator(name = "ID-SEQUENCE", sequenceName = "ID_PAUTA", allocationSize = 1)
     private Long id;
-    private String cpf;
-    private String nome;
-
+    private String descricao;
 }
