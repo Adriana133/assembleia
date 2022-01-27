@@ -11,7 +11,8 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.Optional;
 
-import static com.desafio.assembleia.utils.PautaUtils.*;
+import static com.desafio.assembleia.utils.PautaUtils.criarListaEntity;
+import static com.desafio.assembleia.utils.PautaUtils.criarPautaEntity;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.mockito.ArgumentMatchers.any;
@@ -98,12 +99,5 @@ class PautaServiceTest {
 
         service.excluirPorId(entity.getId());
         verify(repository).deleteById(entity.getId());
-    }
-
-    @Test
-    void quandoExcluirTodos_retornaSucesso() {
-
-        service.excluirTodos();
-        verify(repository).deleteAll();
     }
 }

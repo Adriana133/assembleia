@@ -21,7 +21,7 @@ public class PautaController {
     private final PautaConverter converter;
 
     @PostMapping
-    public ResponseEntity<PautaResponseDTO> salvar(@RequestBody @Valid PautaRequestDTO request) {
+    public ResponseEntity<PautaResponseDTO> criar(@RequestBody @Valid PautaRequestDTO request) {
         return ResponseEntity
                 .status(HttpStatus.CREATED)
                 .body(converter.toResponseDTO(
@@ -55,12 +55,6 @@ public class PautaController {
     @DeleteMapping("/{id}")
     public ResponseEntity excluirPorId(@PathVariable Long id) {
         service.excluirPorId(id);
-        return ResponseEntity.noContent().build();
-    }
-
-    @DeleteMapping
-    public ResponseEntity excluirTodos() {
-        service.excluirTodos();
         return ResponseEntity.noContent().build();
     }
 }

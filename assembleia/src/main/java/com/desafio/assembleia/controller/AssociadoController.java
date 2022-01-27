@@ -59,10 +59,4 @@ public class AssociadoController {
         return ResponseEntity.noContent().build();
 
     }
-
-    @DeleteMapping
-    public ResponseEntity excluirTodos() {
-        service.excluirTodos();
-        return ResponseEntity.noContent().build();
-    }
 }

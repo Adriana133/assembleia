@@ -9,7 +9,6 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import java.util.List;
 import java.util.Optional;
 
 import static com.desafio.assembleia.utils.AssociadoUtils.criarAssociadoEntity;
@@ -99,13 +98,5 @@ class AssociadoServiceTest {
 
         service.excluirPorId(entity.getId());
         verify(repository).deleteById(entity.getId());
-    }
-
-    @Test
-    void quandoExcluirTodos_retornaSucesso() {
-
-        service.excluirTodos();
-        verify(repository).deleteAll();
-
     }
 }

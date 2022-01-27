@@ -6,6 +6,7 @@ import javax.persistence.*;
 
 @Entity
 @AllArgsConstructor
+@NoArgsConstructor
 @Getter
 @Setter
 @Builder
@@ -14,8 +15,8 @@ import javax.persistence.*;
 public class PautaEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "ID-SEQUENCE")
-    @SequenceGenerator(name = "ID-SEQUENCE", sequenceName = "ID_PAUTA", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "ID_PAUTA_SEQUENCE")
+    @SequenceGenerator(name = "ID_PAUTA_SEQUENCE", sequenceName = "ID_PAUTA", allocationSize = 1)
     private Long id;
     private String descricao;
 }

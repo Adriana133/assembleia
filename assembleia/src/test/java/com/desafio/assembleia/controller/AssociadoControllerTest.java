@@ -119,13 +119,6 @@ class AssociadoControllerTest {
                 .andExpect(status().isNoContent());
     }
 
-    @Test
-    void quandoExcluirTodos_retornaStatusCodeOk() throws Exception {
-
-        mvc.perform(MockMvcRequestBuilders.delete(URL))
-                .andExpect(status().isNoContent());
-    }
-
     String getJsonPayload(Long id, String cpf, String nome) throws JsonProcessingException {
 
         AssociadoResponseDTO associadoResponseDTO = AssociadoResponseDTO.builder()

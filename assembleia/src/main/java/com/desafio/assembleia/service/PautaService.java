@@ -37,8 +37,4 @@ public class PautaService {
         buscarPorId(id);
         repository.deleteById(id);
     }
-
-    public void excluirTodos() {
-        repository.deleteAll();
-    }
 }

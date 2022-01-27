@@ -37,8 +37,4 @@ public class AssociadoService {
         buscarPorId(id);
         repository.deleteById(id);
     }
-
-    public void excluirTodos() {
-        repository.deleteAll();
-    }
 }

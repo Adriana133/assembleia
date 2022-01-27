@@ -117,13 +117,6 @@ class PautaControllerTest {
                 .andExpect(status().isNoContent());
     }
 
-    @Test
-    void excluirTodos_retornaStatusCodeOk() throws Exception {
-
-        mvc.perform(MockMvcRequestBuilders.delete(URL))
-                .andExpect(status().isNoContent());
-    }
-
     String getJsonPayload(Long id, String descricao) throws JsonProcessingException {
 
         PautaResponseDTO pautaResponseDTO = PautaResponseDTO.builder()
