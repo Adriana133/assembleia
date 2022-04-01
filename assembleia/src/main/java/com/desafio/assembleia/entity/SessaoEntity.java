@@ -5,6 +5,7 @@ import org.hibernate.annotations.Fetch;
 import org.hibernate.annotations.FetchMode;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 import java.util.Collection;
 
 @Entity
@@ -21,6 +22,8 @@ public class SessaoEntity {
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "ID_SESSAO_SEQUENCE")
     @SequenceGenerator(name = "ID_SESSAO_SEQUENCE", sequenceName = "ID_SESSAO", allocationSize = 1)
     private Long id;
+
+    private LocalDateTime dataInicial;
 
     private int status;
 

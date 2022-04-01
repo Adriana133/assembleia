@@ -6,6 +6,8 @@ import lombok.Builder;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 
+import java.time.LocalDateTime;
+
 @AllArgsConstructor
 @Builder
 @Getter
@@ -14,6 +16,7 @@ public class SessaoResponseDTO {
 
     private Long id;
     private String status;
+    private LocalDateTime dataInicial;
 
     @JsonProperty(value = "id_pauta")
     private Long idPauta;
