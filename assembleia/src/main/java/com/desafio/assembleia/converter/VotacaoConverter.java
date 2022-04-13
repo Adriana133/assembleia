@@ -1,12 +1,14 @@
 package com.desafio.assembleia.converter;
 
+import com.desafio.assembleia.dto.AssociadoResponseDTO;
+import com.desafio.assembleia.dto.SessaoResponseDTO;
 import com.desafio.assembleia.dto.VotacaoRequestDTO;
 import com.desafio.assembleia.dto.VotacaoResponseDTO;
 import com.desafio.assembleia.entity.VotacaoEntity;
-import com.desafio.assembleia.entity.VotacaoId;
 import com.desafio.assembleia.enums.VotoEnum;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -16,17 +18,22 @@ public class VotacaoConverter {
     public VotacaoEntity requestDtoToEntity(VotacaoRequestDTO requestDTO) {
         return VotacaoEntity.builder()
                 .voto(requestDTO.getVoto())
-                .id(VotacaoId.builder()
-                        .idassociado(requestDTO.getIdAssociado())
-                        .idsessao(requestDTO.getIdSessao())
-                        .build())
                 .build();
     }
 
     public VotacaoResponseDTO toResponseDto(VotacaoEntity entity) {
         return VotacaoResponseDTO.builder()
-                .idSessao(entity.getSessao().getId())
-                .idAssociado(entity.getAssociado().getId())
+                .sessao(SessaoResponseDTO.builder()
+                        .id(1L)
+                        .status("Fechada")
+                        .dataInicial(LocalDateTime.now())
+                        .idPauta(33L)
+                        .build())
+                .associado(AssociadoResponseDTO.builder()
+                        .id(1L)
+                        .cpf("99623161034")
+                        .nome("adri")
+                        .build())
                 .voto(VotoEnum.getDescricao(entity.getVoto()))
                 .build();
     }

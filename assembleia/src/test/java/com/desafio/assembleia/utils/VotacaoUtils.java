@@ -11,8 +11,6 @@ public abstract class VotacaoUtils {
     public static VotacaoRequestDTO criarVotacaoRequestDto() {
         return VotacaoRequestDTO.builder()
                 .voto(1)
-                .idSessao(2L)
-                .idAssociado(1L)
                 .build();
     }
 
@@ -29,8 +27,6 @@ public abstract class VotacaoUtils {
     public static VotacaoResponseDTO criarVotacaoResponseDto() {
         return VotacaoResponseDTO.builder()
                 .voto(VotoEnum.SIM.getDescricao())
-                .idAssociado(1L)
-                .idSessao(2L)
                 .build();
     }
 }

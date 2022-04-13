@@ -37,9 +37,7 @@ class VotacaoConverterTest {
         VotacaoResponseDTO responseDtoConvertido = converter.toResponseDto(criarVotacaoEntity());
 
         assertAll(
-                () -> assertEquals(responseDto.getVoto(), responseDtoConvertido.getVoto()),
-                () -> assertEquals(responseDto.getIdAssociado(), responseDtoConvertido.getIdAssociado()),
-                () -> assertEquals(responseDto.getIdSessao(), responseDtoConvertido.getIdSessao())
+                () -> assertEquals(responseDto.getVoto(), responseDtoConvertido.getVoto())
         );
     }
 }
