@@ -3,7 +3,6 @@ package com.desafio.assembleia.entity;
 import lombok.*;
 
 import javax.persistence.*;
-import java.util.Collection;
 
 @Entity
 @AllArgsConstructor
@@ -16,12 +15,8 @@ import java.util.Collection;
 public class AssociadoEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "ID_ASSOCIADO_SEQUENCE")
-    @SequenceGenerator(name = "ID_ASSOCIADO_SEQUENCE", sequenceName = "ID_ASSOCIADO", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String cpf;
     private String nome;
-
-    @OneToMany(mappedBy = "id.associado")
-    private Collection<VotacaoEntity> votacaoEntitiesList;
 }

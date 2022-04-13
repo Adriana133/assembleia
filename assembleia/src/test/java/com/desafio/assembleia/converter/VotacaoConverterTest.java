@@ -25,8 +25,8 @@ class VotacaoConverterTest {
 
         assertAll(
                 () -> assertEquals(entity.getVoto(), entityConvertida.getVoto()),
-                () -> assertEquals(entity.getId().getAssociado().getId(), entityConvertida.getId().getAssociado().getId()),
-                () -> assertEquals(entity.getId().getSessao().getId(), entityConvertida.getId().getSessao().getId())
+                () -> assertEquals(entity.getId().getIdassociado(), entityConvertida.getId().getIdassociado()),
+                () -> assertEquals(entity.getId().getIdsessao(), entityConvertida.getId().getIdsessao())
         );
     }
 

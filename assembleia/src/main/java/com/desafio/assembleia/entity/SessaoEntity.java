@@ -19,8 +19,7 @@ import java.util.Collection;
 public class SessaoEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "ID_SESSAO_SEQUENCE")
-    @SequenceGenerator(name = "ID_SESSAO_SEQUENCE", sequenceName = "ID_SESSAO", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private LocalDateTime dataInicial;
@@ -30,7 +29,4 @@ public class SessaoEntity {
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ID_PAUTA")
     private PautaEntity pauta;
-
-    @OneToMany(mappedBy = "id.sessao")
-    private Collection<VotacaoEntity> votacaoEntitiesList;
 }

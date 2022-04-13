@@ -25,10 +25,6 @@ public abstract class SessaoUtils {
                         .id(1L)
                         .descricao("pauta de votação")
                         .build())
-                .votacaoEntitiesList(Collections.singleton(VotacaoEntity.builder()
-                        .id(VotacaoId.builder().build())
-                        .voto(1)
-                        .build()))
                 .build();
     }
 

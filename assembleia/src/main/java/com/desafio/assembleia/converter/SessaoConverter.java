@@ -1,9 +1,7 @@
 package com.desafio.assembleia.converter;
 
-import com.desafio.assembleia.dto.AssociadoResponseDTO;
 import com.desafio.assembleia.dto.SessaoRequestDTO;
 import com.desafio.assembleia.dto.SessaoResponseDTO;
-import com.desafio.assembleia.entity.AssociadoEntity;
 import com.desafio.assembleia.entity.PautaEntity;
 import com.desafio.assembleia.entity.SessaoEntity;
 import com.desafio.assembleia.enums.StatusEnum;
@@ -35,4 +33,5 @@ public class SessaoConverter {
     public List<SessaoResponseDTO> toListDto(List<SessaoEntity> listEntity) {
         return listEntity.stream().map(this::toResponseDto).collect(Collectors.toList());
     }
+
 }

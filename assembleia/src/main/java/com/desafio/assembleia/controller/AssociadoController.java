@@ -57,6 +57,5 @@ public class AssociadoController {
     public ResponseEntity excluirPorId(@PathVariable Long id) {
         service.excluirPorId(id);
         return ResponseEntity.noContent().build();
-
     }
 }

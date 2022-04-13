@@ -2,7 +2,6 @@ package com.desafio.assembleia.service;
 
 import com.desafio.assembleia.entity.PautaEntity;
 import com.desafio.assembleia.entity.SessaoEntity;
-import com.desafio.assembleia.enums.StatusEnum;
 import com.desafio.assembleia.exception.NotFoundException;
 import com.desafio.assembleia.repository.SessaoRepository;
 import lombok.RequiredArgsConstructor;

@@ -2,9 +2,8 @@ package com.desafio.assembleia.entity;
 
 import lombok.*;
 
+import javax.persistence.Column;
 import javax.persistence.Embeddable;
-import javax.persistence.FetchType;
-import javax.persistence.ManyToOne;
 import java.io.Serializable;
 
 @Getter
@@ -16,9 +15,9 @@ import java.io.Serializable;
 @Embeddable
 public class VotacaoId implements Serializable {
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    private AssociadoEntity associado;
+    @Column(name = "id_associado")
+    private Long idassociado;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    private SessaoEntity sessao;
+    @Column(name = "id_sessao")
+    private Long idsessao;
 }

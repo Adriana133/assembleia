@@ -19,4 +19,7 @@ public class VotacaoResponseDTO {
 
     @JsonProperty(value = "id_sessao")
     private Long idSessao;
+
+    private AssociadoResponseDTO associado;
+    private SessaoResponseDTO sessao;
 }

@@ -41,7 +41,7 @@ public class SessaoController {
     }
 
     @GetMapping("/pauta/{pauta}")
-    public ResponseEntity<List<SessaoResponseDTO>> buscarSessaoPorPauta(@PathVariable("pauta")PautaEntity pauta) {
+    public ResponseEntity<List<SessaoResponseDTO>> buscarSessaoPorPauta(@PathVariable("pauta") PautaEntity pauta) {
         return ResponseEntity
                 .status(HttpStatus.OK)
                 .body(business.buscarPorPauta(pauta));
