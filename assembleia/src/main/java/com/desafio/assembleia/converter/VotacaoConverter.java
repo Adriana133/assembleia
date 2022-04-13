@@ -5,6 +5,7 @@ import com.desafio.assembleia.dto.SessaoResponseDTO;
 import com.desafio.assembleia.dto.VotacaoRequestDTO;
 import com.desafio.assembleia.dto.VotacaoResponseDTO;
 import com.desafio.assembleia.entity.VotacaoEntity;
+import com.desafio.assembleia.entity.VotacaoId;
 import com.desafio.assembleia.enums.VotoEnum;
 import org.springframework.stereotype.Service;
 
@@ -17,6 +18,10 @@ public class VotacaoConverter {
 
     public VotacaoEntity requestDtoToEntity(VotacaoRequestDTO requestDTO) {
         return VotacaoEntity.builder()
+                .id(VotacaoId.builder()
+                        .idassociado(requestDTO.getId().getIdAssociado())
+                        .idsessao(requestDTO.getId().getIdSessao())
+                        .build())
                 .voto(requestDTO.getVoto())
                 .build();
     }

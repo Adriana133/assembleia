@@ -23,6 +23,7 @@ public class VotacaoService {
         return repository.findById(id);
     }
 
-    public List<VotacaoEntity> listarPorIdSessao(Long idSessao) { return repository.listarPorIdSessao(idSessao);
+    public List<VotacaoEntity> listarPorIdSessao(Long idSessao) {
+        return repository.listarPorIdSessao(idSessao);
     }
 }

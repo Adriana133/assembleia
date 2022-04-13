@@ -53,16 +53,17 @@ public class VotacaoBusiness {
     public VotacaoResponseDTO votar(VotacaoRequestDTO requestDTO) {
 
         VotacaoEntity entity = converter.requestDtoToEntity(requestDTO);
-        SessaoEntity sessao = sessaoService.buscarPorId(entity.getSessao().getId());
+        SessaoEntity sessao = sessaoService.buscarPorId(requestDTO.getId().getIdSessao());
+        AssociadoEntity associado = associadoService.buscarPorId(requestDTO.getId().getIdAssociado());
+        int voto = requestDTO.getVoto();
         VotacaoId votacaoId = entity.getId();
-        AssociadoEntity associadoEntity = associadoService.buscarPorId(entity.getAssociado().getId());
 
         validarSeAssociadoJaVotouNessaSessao(votacaoId);
 
         if (sessao != null && sessao.getStatus() == StatusEnum.ABERTA.getId()) {
-            votacaoId.setIdassociado(associadoEntity.getId());
-            votacaoId.setIdsessao(entity.getId().getIdsessao());
-            entity.setVoto(requestDTO.getVoto());
+            votacaoId.setIdassociado(associado.getId());
+            votacaoId.setIdsessao(sessao.getId());
+            entity.setVoto(voto);
             entity.setId(votacaoId);
 
             return converter.toResponseDto(service.votar(entity));
