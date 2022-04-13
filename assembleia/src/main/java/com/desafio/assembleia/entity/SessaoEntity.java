@@ -15,7 +15,7 @@ import java.util.Collection;
 @Setter
 @Builder
 @EqualsAndHashCode
-@Table(name = "sessao")
+@Table(name = "Sessao")
 public class SessaoEntity {
 
     @Id

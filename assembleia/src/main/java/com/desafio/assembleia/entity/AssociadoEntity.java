@@ -11,7 +11,7 @@ import javax.persistence.*;
 @Getter
 @Setter
 @EqualsAndHashCode
-@Table(name = "associado")
+@Table(name = "Associado")
 public class AssociadoEntity {
 
     @Id
