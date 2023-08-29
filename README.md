@@ -1,5 +1,5 @@
 📝 Sobre:
-O projeto assembleia possui o objetivo de permitir a votação dos associados em sessões vinculadaa a uma pauta e calcular/gerenciar os votos por sessão.
+O projeto assembleia possui o objetivo de permitir a votação dos associados em sessões vinculada a uma pauta e calcular/gerenciar os votos por sessão.
 
 🎲 Modelo conceitual:
 Modelo conceitual
